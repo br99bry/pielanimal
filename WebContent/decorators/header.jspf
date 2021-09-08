@@ -1,0 +1,25 @@
+<header>
+    <div class="header-container" >
+        <div class="logo-container">
+           <img  src="<%=request.getContextPath()%>/img/logo.png" > 
+        </div>
+        <div>
+            <h1>PIEL ANIMAL</h1>
+        </div>
+        
+        <div class="header-nav">
+            <i class="fas fa-shopping-cart"></i>
+            <%@include file="menu.jspf" %>
+        </div>
+    </div>
+</header>
+
+ <!-- 
+    Equipo VERDE
+Con nuestro grito de guerra ¡Vamos Verde!  
+Nuestros integrantes son: 
+Aranda Figueroa Jose Bryan
+Mendoza Reboyo Saul
+Mitre Alejandra
+León Reyes Rubén (coordinador)
+     -->

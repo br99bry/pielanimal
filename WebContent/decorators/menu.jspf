@@ -1,0 +1,17 @@
+<nav class="menu-container">
+        <form method="get" action="${ pageContext.request.contextPath }/index.jsp">
+        <input name="pattern"  placeholder="Buscar producto" value="${ pattern }" />
+        <button type="submit" >Buscar</button>
+        </form>
+</nav>
+
+
+ <!-- 
+    Equipo VERDE
+Con nuestro grito de guerra �Vamos Verde!  
+Nuestros integrantes son: 
+Aranda Figueroa Jose Bryan
+Mendoza Reboyo Saul
+Mitre Alejandra
+Leon Reyes Ruben (coordinador)
+     -->
