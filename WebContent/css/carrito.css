@@ -20,6 +20,15 @@
   padding: 15px 0px;
 }
 
+.carrito__items-precio p,
+.carrito__items-total p{
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
 .carrito__items-img-name{
   display: flex;
   justify-content: flex-start;
@@ -34,15 +43,14 @@
 }
 
 .carrito__items-cantidad-wrap{
-  width: 75px;
-  display: flex;
+  width: 50px;
 }
 
 .carrito__items-cantidad-wrap div,
 .carrito__items-cantidad-wrap button{
   box-sizing: border-box;
-  padding: 10px;
-  width: 20%;
+  padding: 5px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +69,22 @@
 }
 .carrito__items-cantidad-wrap button:active{
   transform: scale(0.95);
+}
+
+.carrito__items-subtotal{
+  grid-column: 3/4;
+  font-weight: bold;
+
+}
+
+.carrito__items-subtotal-value{
+  grid-column: 4/5;
+}
+
+.carrito__items-subtotal-value p{
+  text-decoration: underline;
+  text-decoration-color: #f14848;
+  text-underline-offset: 5px;
 }
 
 @media screen and (max-width: 768px) {
