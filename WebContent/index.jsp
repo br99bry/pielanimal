@@ -14,8 +14,6 @@ Le�n Reyes Rub�n (coordinador)
   <head>
     <meta http-equiv="content-type" content="text/html;
       charset=windows-1252">
-    <meta name="GENERATOR" content="SeaMonkey/2.40 [en] (Windows; 10;
-      Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz 2.40 GHz) [Composer]">
     <meta name="Author" content="EQUIPO VERDE">
     <title>Piel Animal</title>
     <link rel="stylesheet" href="css/style.css">
@@ -46,7 +44,6 @@ Le�n Reyes Rub�n (coordinador)
         </div>
       </div>
     </c:forEach>
-        
   </main>        
 </body>
 </html>
