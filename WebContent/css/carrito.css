@@ -87,6 +87,32 @@
   text-underline-offset: 5px;
 }
 
+.carrito__items-buy{
+  grid-column: 4/5;
+  padding: 10px 0;
+}
+
+.carrito__items-buy button{
+  background-color: #1a1919;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 450ms ease;
+}
+
+.carrito__items-buy button:hover{
+  transform: scale(1.05);
+  color: #1a1919;
+  background-color: white;
+  border: 2px solid #1a1919;
+}
+
+.carrito__items-buy button:active{
+  transform: scale(0.95);
+}
+
 @media screen and (max-width: 768px) {
   .carrito__items-img-name img{
     display: none;
