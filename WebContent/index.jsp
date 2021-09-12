@@ -5,7 +5,7 @@ Nuestros integrantes son:
 Aranda Figueroa Jose Bryan
 Mendoza Reboyo Saul
 Mitre Alejandra
-Leï¿½n Reyes Rubï¿½n (coordinador)
+León Reyes Rubï¿½n (coordinador)
   -->
 <!DOCTYPE html>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -32,7 +32,7 @@ Leï¿½n Reyes Rubï¿½n (coordinador)
             pageContext.setAttribute("pattern",pattern);
     --%>
     <sql:query var="resultados" dataSource="jdbc/TestDS" >
-        SELECT * FROM pielanimal.producto WHERE nombre_producto LIKE ? ORDER BY 3;
+        SELECT * FROM producto WHERE nombre_producto LIKE ? ORDER BY 3;
         <sql:param value="${ pattern }" />
     </sql:query>
     <c:forEach var="fila" items="${ resultados.rows }">
@@ -44,6 +44,7 @@ Leï¿½n Reyes Rubï¿½n (coordinador)
         </div>
       </div>
     </c:forEach>
-  </main>        
+  </main>
+          
 </body>
 </html>
