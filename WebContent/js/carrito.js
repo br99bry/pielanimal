@@ -39,7 +39,9 @@ productsCart.forEach(product => {
   calcItems(product);
   button.addEventListener( 'click', () =>{
     let quantity = button.parentNode.querySelector('.quantity').innerText;
-    quantity = parseInt(quantity) - 1;
+    if(quantity!=1){
+      quantity = parseInt(quantity) - 1;
+    }
     const number = button.parentNode.querySelector('.quantity');
     number.innerText=`${quantity}`;
     calcItems(product);
