@@ -46,4 +46,15 @@
       <servlet-name>CarritoUpdate</servlet-name>
       <url-pattern>/CarritoUpdate</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+      <description>description</description>
+      <display-name>CarritoForward</display-name>
+      <servlet-name>CarritoForward</servlet-name>
+      <servlet-class>uam.mx.azc.verde.pielAnimal.controller.CarritoForwardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>CarritoForward</servlet-name>
+      <url-pattern>/CarritoForward</url-pattern>
+  </servlet-mapping>
 </web-app>

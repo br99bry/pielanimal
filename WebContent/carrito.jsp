@@ -48,7 +48,7 @@
               <div class="carrito__items-cantidad-wrap">
                 <button type="button" class="carrito__substract-quantity" > - </button>
                 <div class="quantity" > ${fila.cantidad_producto} </div>
-                <button type="button" class="carrito__add-quantity" > + </button>
+                <button type="submit" class="carrito__add-quantity" > + </button>
               </div>
             </div>
             <div class="carrito__items-total">
@@ -76,11 +76,13 @@
           </p>
         </div>
       </div>
+     <form method="post"
+ 		action="${pageContext.request.contextPath }"/CarritoForward">
       <div class="carrito__items-wrapper">
         <div class="carrito__items-buy">
-          <button type="button" >Checkout</button>
+          <button type="submit" >Regresar</button>
         </div>
-      </div>
+      </div></form>
     </section>
     <script src="./js/carrito.js"></script>
   </body>

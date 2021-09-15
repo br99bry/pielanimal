@@ -1,8 +1,8 @@
 package uam.mx.azc.verde.pielAnimal.controller;
 
 import java.io.IOException;
-import java.io.Writer;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,27 +10,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class CarritoUpdateServlet
+ * Servlet implementation class CarritoForwardServlet
  */
-@WebServlet(name = "CarritoUpdate", urlPatterns = { "/CarritoUpdate" })
-public class CarritoUpdateServlet extends HttpServlet {
+@WebServlet(name = "CarritoForward", urlPatterns = { "/CarritoForward" })
+public class CarritoForwardServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	
-	public CarritoUpdateServlet() {
-		// TODO Auto-generated constructor stub
-		}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	
+	/**
+	* Default constructor.
+	*/
+	public CarritoForwardServlet() {
+	// TODO Auto-generated constructor stub
+	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		log("Actualizando cantidad del carrito");
+		log( "Actualizando datos del carrito");
 		
-		String base = request.getContextPath();
-		response.sendRedirect(base + "/carrito.jsp");
-		
-		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/carrito.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }
