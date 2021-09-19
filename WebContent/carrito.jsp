@@ -11,7 +11,8 @@
     <title>Carrito - Piel Animal</title>
   </head>
   <body>
-    <sql:query var="resultados" dataSource="jdbc/TestDS" sql="SELECT c.id_producto,url,nombre_producto, precio, cantidad_producto FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto;" />
+    <sql:query var="resultados" dataSource="jdbc/TestDS" sql="SELECT c.id_producto,url,nombre_producto, precio, cantidad_producto 
+    														FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto;" />
     <section class="carrito__wrapper">
       <h2 class="carrito__title" >Carrito de compras</h2>
       <div class="carrito__items-wrapper">
@@ -30,27 +31,42 @@
       </div>
 
       <c:forEach var="fila" items="${resultados.rows }">
+      
         <form method="post" action="${pageContext.request.contextPath }/CarritoUpdate"> 
+          
           <div class="carrito__items-wrapper carrito-product">
+            
             <div class="carrito__items-img-name">
               <img src="${fila.url}" alt="producto">
-              <p>${fila.nombre_producto} </p>
+              <p>${fila.nombre_producto} <%-- <input type="hidden" name="nombre"
+  				value="${fila.nombre_producto }"></p> --%>
+  			  <p>${fila.id_producto} <input type="hidden" name="id"
+  				value="${fila.id_producto }"></p>
             </div>
+            
             <div class="carrito__items-precio">
               <p> 
                 <span>$</span>
                 <i>
-                  ${fila.precio} 
+                  ${fila.precio} <input type="hidden" name="precio"
+  				value="${fila.precio }"> 
                 </i>
               </p>
             </div>
+            
             <div class="carrito__items-cantidad">
               <div class="carrito__items-cantidad-wrap">
-                <button type="button" class="carrito__substract-quantity" > - </button>
-                <div class="quantity" > ${fila.cantidad_producto} </div>
-                <button type="submit" class="carrito__add-quantity" > + </button>
+              	<%-- <button type="submit" class="carrito__add-quantity" > + </button>
+                <div class="quantity"> ${fila.cantidad_producto} </div> --%>
+                
+                <input type=number min="1" max="15" value="${ fila.cantidad_producto}" name="cantidad"/>
+                <span><input type="submit" value="Modificar" name="cantidad"/></span>
+                
+                
+                <!-- <button type="submit" class="carrito__substract-quantity" > - </button> -->                
               </div>
             </div>
+            
             <div class="carrito__items-total">
               <p> 
                 <span>$</span>
@@ -59,6 +75,7 @@
                 </i>
               </p>
             </div>
+            
           </div>
         </form>
       </c:forEach>
@@ -83,6 +100,7 @@
           <button type="submit" >Regresar</button>
         </div>
       </div></form>
+      
     </section>
     <script src="./js/carrito.js"></script>
   </body>
