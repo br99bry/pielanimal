@@ -1,8 +1,13 @@
 <header>
     <div class="header-container" >
-        <div class="logo-container">
-           <img  src="<%=request.getContextPath()%>/img/logo.png" > 
-        </div>
+        <form class="logo-header" method="post"
+        action="${pageContext.request.contextPath }"/CarritoForward">
+            <button class="logo-header" type="submit" >
+                <div class="logo-container">
+                    <img  src="<%=request.getContextPath()%>/img/logo.png" > 
+                </div>  
+            </button>
+        </form>
         <div>
             <h1>PIEL ANIMAL</h1>
         </div>
@@ -16,10 +21,10 @@
 
  <!-- 
     Equipo VERDE
-Con nuestro grito de guerra ¡Vamos Verde!  
+Con nuestro grito de guerra ï¿½Vamos Verde!  
 Nuestros integrantes son: 
 Aranda Figueroa Jose Bryan
 Mendoza Reboyo Saul
 Mitre Alejandra
-León Reyes Rubén (coordinador)
+Leï¿½n Reyes Rubï¿½n (coordinador)
      -->

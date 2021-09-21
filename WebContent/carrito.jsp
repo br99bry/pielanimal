@@ -38,10 +38,9 @@
             
             <div class="carrito__items-img-name">
               <img src="${fila.url}" alt="producto">
-              <p>${fila.nombre_producto} <%-- <input type="hidden" name="nombre"
-  				value="${fila.nombre_producto }"></p> --%>
-  			  <p>${fila.id_producto} <input type="hidden" name="id"
-  				value="${fila.id_producto }"></p>
+              <p>${fila.nombre_producto} </p> 
+  			      <p style="display: none;">${fila.id_producto} <input  type="hidden" name="id"
+  				    value="${fila.id_producto }"></p>
             </div>
             
             <div class="carrito__items-precio">
@@ -49,21 +48,16 @@
                 <span>$</span>
                 <i>
                   ${fila.precio} <input type="hidden" name="precio"
-  				value="${fila.precio }"> 
+  				        value="${fila.precio }"> 
                 </i>
               </p>
             </div>
             
             <div class="carrito__items-cantidad">
               <div class="carrito__items-cantidad-wrap">
-              	<%-- <button type="submit" class="carrito__add-quantity" > + </button>
-                <div class="quantity"> ${fila.cantidad_producto} </div> --%>
-                
-                <input type=number min="1" max="15" value="${ fila.cantidad_producto}" name="cantidad"/>
-                <span><input type="submit" value="Modificar" name="cantidad"/></span>
-                
-                
-                <!-- <button type="submit" class="carrito__substract-quantity" > - </button> -->                
+              	<button value="cantidad" name="boton" type="submit" class="carrito__add-quantity" > + </button>
+                <input class="quantity" value="${ fila.cantidad_producto}" name="cantidad"/>
+                <button value="cantidad" name="boton" type="submit" class="carrito__substract-quantity"  > - </button>                
               </div>
             </div>
             
@@ -74,6 +68,9 @@
                   
                 </i>
               </p>
+              <button name="boton" type="submit" value="quitar" class="carrito__items-delete">
+                <span class="fa fa-trash" aria-hidden="true" ></span>
+              </button>
             </div>
             
           </div>
@@ -91,15 +88,17 @@
               
             </i>
           </p>
+          
         </div>
       </div>
-     <form method="post"
- 		action="${pageContext.request.contextPath }"/CarritoForward">
+
       <div class="carrito__items-wrapper">
         <div class="carrito__items-buy">
-          <button type="submit" >Regresar</button>
+          <a href="./checkout.jsp" >
+            <button type="submit" >Checkout</button>
+          </a>
         </div>
-      </div></form>
+      </div>
       
     </section>
     <script src="./js/carrito.js"></script>

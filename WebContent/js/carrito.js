@@ -12,7 +12,7 @@ const calSubTotal = () => {
 
 const calcItems = (product) => {
   const quantityManage = product.querySelector('.quantity');
-  let quantity = parseInt(quantityManage.innerText);
+  let quantity = parseInt(quantityManage.value);
   const unitPriceBox = product.querySelector('.carrito__items-precio p i');
   const unitPrice = parseFloat(unitPriceBox.innerText);
   const quantityPriceBox = product.querySelector('.carrito__items-total p i');
@@ -26,10 +26,10 @@ productsCart.forEach(product => {
   calcItems(product);
   const button = product.querySelector('.carrito__add-quantity');
   button.addEventListener( 'click', () =>{
-    let quantity = button.parentNode.querySelector('.quantity').innerText;
+    let quantity = button.parentNode.querySelector('.quantity').value;
     quantity = parseInt(quantity) + 1;
     const number = button.parentNode.querySelector('.quantity');
-    number.innerText=`${quantity}`;
+    number.value=`${quantity}`;
     calcItems(product);
   } )
 });
@@ -38,12 +38,12 @@ productsCart.forEach(product => {
   const button = product.querySelector('.carrito__substract-quantity');
   calcItems(product);
   button.addEventListener( 'click', () =>{
-    let quantity = button.parentNode.querySelector('.quantity').innerText;
+    let quantity = button.parentNode.querySelector('.quantity').value;
     if(quantity!=1){
       quantity = parseInt(quantity) - 1;
     }
     const number = button.parentNode.querySelector('.quantity');
-    number.innerText=`${quantity}`;
+    number.value=`${quantity}`;
     calcItems(product);
   } )
 });

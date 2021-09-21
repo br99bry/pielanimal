@@ -113,8 +113,40 @@
   transform: scale(0.95);
 }
 
+.carrito__items-delete{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.carrito__items-delete span:hover{
+  cursor: pointer;
+  transition: all 450ms ease;
+  transform: scale(1.05);
+  color: #f14848;
+}
+
+.carrito__items-delete span:active{
+  transition: all 450ms ease;
+  transform: scale(0.8);
+}
+
+.quantity{
+  border: none;
+  background-color: transparent;
+  padding: 10px 0px;
+  width: 50px;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .carrito__items-img-name img{
     display: none;
+  }
+  .carrito__wrapper{
+    width: 97%;
   }
 }

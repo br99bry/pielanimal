@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import mx.uam.azc.verde.pielanimal.controller.CantidadDTO;
+import uam.mx.azc.verde.pielAnimal.data.CantidadDTO;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
