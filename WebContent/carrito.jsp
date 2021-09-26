@@ -12,7 +12,8 @@
   </head>
   <body>
     <sql:query var="resultados" dataSource="jdbc/TestDS" sql="SELECT c.id_producto,url,nombre_producto, precio, cantidad_producto 
-    														FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto;" />
+    														FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto 
+                                                            WHERE c.id_orden=(select id_orden from orden ORDER BY id_orden DESC LIMIT 1) ;" />
     <section class="carrito__wrapper">
       <h2 class="carrito__title" >Carrito de compras</h2>
       <div class="carrito__items-wrapper">
