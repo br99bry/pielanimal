@@ -2,9 +2,7 @@ package uam.mx.azc.verde.pielAnimal.controller;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 import uam.mx.azc.verde.pielAnimal.data.CantidadDTO;
 
@@ -76,14 +74,23 @@ public class CarritoUpdateServlet extends HttpServlet {
 
 	private void updateCarrito(Connection connection, CantidadDTO cantidad) throws SQLException {
 		//Se manda la instrucción para hacer la modificación en la base de datos
+		/*Cambiamos el statement por un PreparedStatement
+		Statement statement = connection.createStatement();*/
 		
-		Statement statement = connection.createStatement();
-		
+	    PreparedStatement statement = 
+	        connection.prepareStatement( "UPDATE carrito SET " + " cantidad_producto = ? WHERE id_producto = ?;" );
 		
 		try {
-			statement.executeUpdate("UPDATE carrito SET "+" cantidad_producto = '" 
-						+ cantidad.getCantidad() + "' WHERE id_producto = '" + cantidad.getId() + "';");
-		} finally {
+		  statement.setInt( 1, cantidad.getCantidad() );
+		  statement.setString( 2, cantidad.getId() );
+		  statement.executeUpdate();
+          /* Antiguo código
+           * statement.executeUpdate("UPDATE carrito SET "
+           * +" cantidad_producto = '" + cantidad.getCantidad() +
+           * "' WHERE id_producto = '" + cantidad.getId() + "';");
+           */
+		  
+		  } finally {
 			statement.close();
 		}
 		// TODO Auto-generated method stub
