@@ -57,4 +57,15 @@
       <servlet-name>CarritoForward</servlet-name>
       <url-pattern>/CarritoForward</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+      <description>servlet para consultar la tabla de carrito</description>
+      <display-name>CarritoUpdateForm</display-name>
+      <servlet-name>CarritoUpdateForm</servlet-name>
+      <servlet-class>uam.mx.azc.verde.pielAnimal.controller.CarritoUpdateFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>CarritoUpdateForm</servlet-name>
+      <url-pattern>/CarritoUpdateForm</url-pattern>
+  </servlet-mapping>
 </web-app>

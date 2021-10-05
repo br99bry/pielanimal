@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="css/carrito.css">
     <title>Carrito - Piel Animal</title>
   </head>
+  
   <body>
-    <sql:query var="resultados" dataSource="jdbc/TestDS" sql="SELECT c.id_producto,url,nombre_producto, precio, cantidad_producto 
-    														FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto 
-                                                            WHERE c.id_orden=(select id_orden from orden ORDER BY id_orden DESC LIMIT 1) ;" />
+    
     <section class="carrito__wrapper">
       <h2 class="carrito__title" >Carrito de compras</h2>
       <div class="carrito__items-wrapper">
@@ -30,26 +29,27 @@
           <h4>Total</h4>
         </div>
       </div>
-
-      <c:forEach var="fila" items="${resultados.rows }">
+      
+      <!-- se cambian las variables para desplegar la informacion -->
+      <c:forEach var="cantidad" items="${cantidades}">
       
         <form method="post" action="${pageContext.request.contextPath }/CarritoUpdate"> 
           
           <div class="carrito__items-wrapper carrito-product">
             
             <div class="carrito__items-img-name">
-              <img src="${fila.url}" alt="producto">
-              <p>${fila.nombre_producto} </p> 
-  			      <p style="display: none;">${fila.id_producto} <input  type="hidden" name="id"
-  				    value="${fila.id_producto }"></p>
+              <img src="${cantidad.url}" alt="producto">
+              <p>${cantidad.nombre} </p> 
+  			      <p style="display: none;">${cantidad.id} <input  type="hidden" name="id"
+  				    value="${cantidad.id }"></p>
             </div>
             
             <div class="carrito__items-precio">
               <p> 
                 <span>$</span>
                 <i>
-                  ${fila.precio} <input type="hidden" name="precio"
-  				        value="${fila.precio }"> 
+                  ${cantidad.precio} <input type="hidden" name="precio"
+  				        value="${cantidad.precio }"> 
                 </i>
               </p>
             </div>
@@ -57,7 +57,7 @@
             <div class="carrito__items-cantidad">
               <div class="carrito__items-cantidad-wrap">
               	<button value="cantidad" name="boton" type="submit" class="carrito__add-quantity" > + </button>
-                <input class="quantity" value="${ fila.cantidad_producto}" name="cantidad"/>
+                <input class="quantity" value="${ cantidad.cantidad}" name="cantidad"/>
                 <button value="cantidad" name="boton" type="submit" class="carrito__substract-quantity"  > - </button>                
               </div>
             </div>
