@@ -75,7 +75,6 @@ public class CarritoUpdateFormServlet extends HttpServlet {
       List<CantidadDTO> cantidades = new ArrayList<CantidadDTO>();
       while(cursor.next()) {
         CantidadDTO cantidad = new CantidadDTO();
-        
         cantidad.setId( cursor.getString( 1 ) );
         cantidad.setUrl( cursor.getString( 2 ) );
         cantidad.setNombre( cursor.getString( 3 ) );
@@ -84,7 +83,6 @@ public class CarritoUpdateFormServlet extends HttpServlet {
         log("agregando cantidad");
         System.out.println(cantidad);
         cantidades.add( cantidad );
-        
       }
       return cantidades;
     }finally {

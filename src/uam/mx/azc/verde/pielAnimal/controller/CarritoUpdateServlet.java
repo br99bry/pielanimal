@@ -1,7 +1,6 @@
 package uam.mx.azc.verde.pielAnimal.controller;
 
 import java.io.IOException;
-import java.io.Writer;
 import java.sql.*;
 
 import uam.mx.azc.verde.pielAnimal.data.CantidadDTO;
@@ -41,7 +40,7 @@ public class CarritoUpdateServlet extends HttpServlet {
 			throw new ServletException(e);
 		}
 		String base = request.getContextPath();
-		response.sendRedirect(base + "/carrito.jsp");
+		response.sendRedirect(base + "/CarritoUpdateForm");
 		
 		
 	}

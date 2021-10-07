@@ -11,8 +11,7 @@
     <title>Carrito - Piel Animal</title>
   </head>
   
-  <body>
-    
+  <body>  
     <section class="carrito__wrapper">
       <h2 class="carrito__title" >Carrito de compras</h2>
       <div class="carrito__items-wrapper">
@@ -29,21 +28,16 @@
           <h4>Total</h4>
         </div>
       </div>
-      
       <!-- se cambian las variables para desplegar la informacion -->
       <c:forEach var="cantidad" items="${cantidades}">
-      
-        <form method="post" action="${pageContext.request.contextPath }/CarritoUpdate"> 
-          
-          <div class="carrito__items-wrapper carrito-product">
-            
+        <form method="post" action="${pageContext.request.contextPath}/CarritoUpdate"> 
+          <div class="carrito__items-wrapper carrito-product" >
             <div class="carrito__items-img-name">
               <img src="${cantidad.url}" alt="producto">
               <p>${cantidad.nombre} </p> 
   			      <p style="display: none;">${cantidad.id} <input  type="hidden" name="id"
   				    value="${cantidad.id }"></p>
             </div>
-            
             <div class="carrito__items-precio">
               <p> 
                 <span>$</span>

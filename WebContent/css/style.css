@@ -71,6 +71,18 @@ button.logo-header{
 
 .header-nav i{
     line-height: 25px;
+    color: white;
+    transition: all 450ms ease;
+}
+
+.header-nav i:hover{
+    transform: scale(1.05);
+    color: red;
+    cursor: pointer;
+}
+
+.header-nav i:active{
+    transform: scale(0.95);
 }
 
 .menu-container{

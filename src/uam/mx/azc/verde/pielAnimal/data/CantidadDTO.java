@@ -10,6 +10,10 @@ import java.io.Serializable;
  *
  */
 public class CantidadDTO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String _id;
 	String _url;
 	String _nombre;
