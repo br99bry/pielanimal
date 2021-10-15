@@ -5,6 +5,9 @@
         <pattern>/css/*</pattern>
         <pattern>/img/*</pattern>
         <pattern>/decorators/*</pattern>
+        <pattern>/index.jsp</pattern>
+        <pattern>/register.jsp</pattern>
+        <pattern>/admin.jsp</pattern>
     </excludes>
 
     <decorator name="main" page="main.jsp">
