@@ -1,7 +1,7 @@
 <header>
     <div class="header-container" >
         <form class="logo-header" method="post"
-        action="${pageContext.request.contextPath }"/CarritoForward">
+        action="${pageContext.request.contextPath }/CarritoForward">
             <button class="logo-header" type="submit" >
                 <div class="logo-container">
                     <img  src="<%=request.getContextPath()%>/img/logo.png" > 

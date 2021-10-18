@@ -30,7 +30,7 @@
       </div>
       <!-- se cambian las variables para desplegar la informacion -->
       <c:forEach var="cantidad" items="${cantidades}">
-        <form method="post" action="${pageContext.request.contextPath}/CarritoUpdate"> 
+        <form method="post" action="${pageContext.request.contextPath}/ModCar"> 
           <div class="carrito__items-wrapper carrito-product" >
             <div class="carrito__items-img-name">
               <img src="${cantidad.url}" alt="producto">
@@ -50,9 +50,11 @@
             
             <div class="carrito__items-cantidad">
               <div class="carrito__items-cantidad-wrap">
+              
               	<button value="cantidad" name="boton" type="submit" class="carrito__add-quantity" > + </button>
                 <input class="quantity" value="${ cantidad.cantidad}" name="cantidad"/>
-                <button value="cantidad" name="boton" type="submit" class="carrito__substract-quantity"  > - </button>                
+                <button value="cantidad" name="boton" type="submit" class="carrito__substract-quantity"  > - </button>    
+                            
               </div>
             </div>
             
@@ -63,6 +65,7 @@
                   
                 </i>
               </p>
+              
               <button name="boton" type="submit" value="quitar" class="carrito__items-delete">
                 <span class="fa fa-trash" aria-hidden="true" ></span>
               </button>
