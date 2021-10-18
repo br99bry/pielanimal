@@ -20,6 +20,12 @@
   object-fit: cover;
 }
 
+.home__product:hover{
+    transition: all 450ms ease;
+    translate: scale(1.1);
+    cursor: pointer;
+}
+
 .home__product-details{
   width: 100%;
   height: 100px;
