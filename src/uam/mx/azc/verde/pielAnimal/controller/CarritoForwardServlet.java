@@ -28,9 +28,9 @@ public class CarritoForwardServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		log( "Actualizando datos del carrito");
+		log( "Cambiando de página");
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/carrito.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/indexStore.jsp");
 		dispatcher.forward(request, response);
 	}
 

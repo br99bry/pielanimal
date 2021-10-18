@@ -80,10 +80,11 @@ public class CarritoUpdateFormServlet extends HttpServlet {
         cantidad.setNombre( cursor.getString( 3 ) );
         cantidad.setPrecio( cursor.getDouble( 4 ) );
         cantidad.setCantidad( cursor.getInt( 5 ) );
-        log("agregando cantidad");
-        System.out.println(cantidad);
+        
+        //System.out.println(cantidad);
         cantidades.add( cantidad );
       }
+      log("Mostrando productos en el carrito de compras");
       return cantidades;
     }finally {
       cursor.close();
