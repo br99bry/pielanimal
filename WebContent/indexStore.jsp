@@ -5,7 +5,7 @@ Nuestros integrantes son:
 Aranda Figueroa Jose Bryan
 Mendoza Reboyo Saul
 Mitre Alejandra
-León Reyes Rubï¿½n (coordinador)
+Leï¿½n Reyes Rubï¿½n (coordinador)
   -->
 <!DOCTYPE html>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -36,15 +36,17 @@ León Reyes Rubï¿½n (coordinador)
         <sql:param value="${ pattern }" />
     </sql:query>
     <c:forEach var="fila" items="${ resultados.rows }">
-     <form method="post" action="${pageContext.request.contextPath}/ModCar">
+     <form method="post" action="${pageContext.request.contextPath}/agregarCarrito">
       <div class="home__product">
         <img src="${fila.url}" />
         <div class="home__product-details">
-          <input  type="hidden" name="id"/>
-                    value="${cantidad.id }">
+          <input  
+          type="hidden" 
+          name="id "
+          value="${fila.id_producto }"/> 
           <p class="home__product-name" > ${fila.nombre_producto} </p>
           <p class="home__product-price" >$ ${fila.precio} </p>
-          <button value="add" name="boton" type="submit"> + </button>
+          <button class="home__product-addCart" value="add" type="submit">Agregar al carrito <i class="fas fa-cart-plus"></i> </button>
         </div>
       </div>
       </form>

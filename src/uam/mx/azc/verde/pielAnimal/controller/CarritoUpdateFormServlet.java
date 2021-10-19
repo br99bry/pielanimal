@@ -69,7 +69,7 @@ public class CarritoUpdateFormServlet extends HttpServlet {
     ResultSet cursor = statement.executeQuery( "SELECT "
         + "c.id_producto,url,nombre_producto, precio, cantidad_producto "
         + "FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto "
-        + "WHERE c.id_orden=(select id_orden from orden ORDER BY id_orden DESC LIMIT 1)" );
+        + "WHERE c.id_orden=(select id_orden from carrito ORDER BY id_orden DESC LIMIT 1)" );
     
     try {
       List<CantidadDTO> cantidades = new ArrayList<CantidadDTO>();

@@ -46,19 +46,11 @@ public class ModCarServlet extends HttpServlet {
 	        String base = request.getContextPath();
 	        response.sendRedirect( base + "/CarritoUpdateForm" );
 		  
-          } /*
-             * else if("add".equals(action)) { try { add(request, response);
-             * }catch(Exception e) { throw new ServletException(e); } String
-             * base = request.getContextPath(); response.sendRedirect( base +
-             * "/CarritoUpdateForm" ); }
-             */
+          } 
+		
+             
 	}
 
-  private void add( HttpServletRequest request, HttpServletResponse response )
-  {
-    //DEfinir el metodo
-    
-  }
 
   private void delete( HttpServletRequest request,
       HttpServletResponse response ) throws SQLException, NamingException
@@ -81,7 +73,7 @@ public class ModCarServlet extends HttpServlet {
   {
     PreparedStatement statement = 
         connection.prepareStatement( "DELETE FROM carrito WHERE id_producto = ?;" );
-    
+    	
     try {
       statement.setString( 1, idProd );
       statement.executeUpdate();

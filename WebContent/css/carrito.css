@@ -1,6 +1,7 @@
 .carrito__wrapper{
   width: 90%;
   margin: 0 auto;
+  min-height: 78vh;
 }
 
 .carrito__items-wrapper{
@@ -141,6 +142,8 @@
   width: 50px;
   text-align: center;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .carrito__items-img-name img{

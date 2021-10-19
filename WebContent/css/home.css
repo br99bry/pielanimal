@@ -39,8 +39,22 @@
 }
 
 .home__product-details .home__product-price{
-  color: #6f3006;
+  color: rgb(255, 255, 255);
   font-size: 15px;
+}
+
+.home__product-addCart{
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.home__product-addCart:hover{
+  transition: all 450ms ease;
+  transform: scale(1.05);
+  color:white; 
+  background-color: black;
 }
 
 @media screen and (max-width: 900px) {
