@@ -1,6 +1,8 @@
 package uam.mx.azc.verde.pielAnimal.admin;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +21,15 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		log("Iniciando sesión");
+		
+		String n = request.getParameter( "user" );
+		String m = request.getParameter( "pwd" );
+		
+		if(n.equals( "admin" ) && m.equals( "admin" )) {
+		  RequestDispatcher dispatcher = request.getRequestDispatcher("/indexStore.jsp");
+	      dispatcher.forward(request, response);
+		}String base = request.getContextPath();
+        response.sendRedirect(base + "/index.jsp");
 		
 		
 		

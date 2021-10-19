@@ -14,67 +14,66 @@ public class ProductoDTO implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	String _id;
-	String _nombre;
-	double _precio;
-	String _url;
+	int _id;
+	int _idProducto;
+	int _idOrden;
+	int _cantidad;
   /**
    * @return the id
    */
-  public String getId()
+  public int getId()
   {
     return _id;
   }
   /**
    * @param id the id to set
    */
-  public void setId( String id )
+  public void setId( int id )
   {
     _id = id;
   }
   /**
-   * @return the nombre
+   * @return the idProducto
    */
-  public String getNombre()
+  public int getIdProducto()
   {
-    return _nombre;
+    return _idProducto;
   }
   /**
-   * @param nombre the nombre to set
+   * @param idProducto the idProducto to set
    */
-  public void setNombre( String nombre )
+  public void setIdProducto( int idProducto )
   {
-    _nombre = nombre;
+    _idProducto = idProducto;
   }
   /**
-   * @return the precio
+   * @return the idOrden
    */
-  public double getPrecio()
+  public int getIdOrden()
   {
-    return _precio;
+    return _idOrden;
   }
   /**
-   * @param precio the precio to set
+   * @param idOrden the idOrden to set
    */
-  public void setPrecio( double precio )
+  public void setIdOrden( int idOrden )
   {
-    _precio = precio;
+    _idOrden = idOrden;
   }
   /**
-   * @return the url
+   * @return the cantidad
    */
-  public String getUrl()
+  public int getCantidad()
   {
-    return _url;
+    return _cantidad;
   }
   /**
-   * @param url the url to set
+   * @param cantidad the cantidad to set
    */
-  public void setUrl( String url )
+  public void setCantidad( )
   {
-    _url = url;
+    _cantidad = 1;
   }
-	
   
 	
 }
