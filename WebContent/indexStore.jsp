@@ -36,12 +36,12 @@ León Reyes Rubï¿½n (coordinador)
         <sql:param value="${ pattern }" />
     </sql:query>
     <c:forEach var="fila" items="${ resultados.rows }">
-     <form method="post" action="${pageContext.request.contextPath}/ModCar">
+     <form method="post" action="${pageContext.request.contextPath}/CarritoAdd">
       <div class="home__product">
         <img src="${fila.url}" />
         <div class="home__product-details">
-          <input  type="hidden" name="id"
-                    value="${cantidad.id }"/>
+          <p><input type="hidden" name="id"
+                    value="${fila.id_producto }"></p>
           <p class="home__product-name" > ${fila.nombre_producto} </p>
           <p class="home__product-price" >$ ${fila.precio} </p>
           <button value="add" name="boton" type="submit"> + </button>

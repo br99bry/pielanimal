@@ -29,13 +29,14 @@
         </div>
       </div>
       <!-- se cambian las variables para desplegar la informacion -->
+      
       <c:forEach var="cantidad" items="${cantidades}">
         <form method="post" action="${pageContext.request.contextPath}/ModCar"> 
           <div class="carrito__items-wrapper carrito-product" >
             <div class="carrito__items-img-name">
               <img src="${cantidad.url}" alt="producto">
               <p>${cantidad.nombre} </p> 
-  			      <p style="display: none;">${cantidad.id} <input  type="hidden" name="id"
+  			      <p style="display: none;">${cantidad.id} <input type="hidden" name="id"
   				    value="${cantidad.id }"></p>
             </div>
             <div class="carrito__items-precio">
