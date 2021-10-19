@@ -40,8 +40,8 @@ León Reyes Rubï¿½n (coordinador)
       <div class="home__product">
         <img src="${fila.url}" />
         <div class="home__product-details">
-          <input  type="hidden" name="id"/>
-                    value="${cantidad.id }">
+          <input  type="hidden" name="id"
+                    value="${cantidad.id }"/>
           <p class="home__product-name" > ${fila.nombre_producto} </p>
           <p class="home__product-price" >$ ${fila.precio} </p>
           <button value="add" name="boton" type="submit"> + </button>

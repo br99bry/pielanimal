@@ -84,7 +84,7 @@
       <description>description</description>
       <display-name>login</display-name>
       <servlet-name>login</servlet-name>
-      <servlet-class>uam.mx.azc.verde.pielAnimal.admin.login</servlet-class>
+      <servlet-class>uam.mx.azc.verde.pielAnimal.admin.loginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
       <servlet-name>login</servlet-name>
