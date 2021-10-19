@@ -22,7 +22,7 @@
         <section class="login-container">
             <h2>Inicia sesión</h2>
             
-            <form action="${pageContext.request.contextPath}/login" class="login-container-form">
+            <form action="${pageContext.request.contextPath}/indexStore.jsp" class="login-container-form">
                 <input type="text" class="input" placeholder="Usuario" name="user" required>
                 <input type="password" class="input" placeholder="Constraseña" name="pwd" required>
                 <button type="submit" class="button">Iniciar sesión</button>

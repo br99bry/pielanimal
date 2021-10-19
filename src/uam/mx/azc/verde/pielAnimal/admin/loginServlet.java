@@ -21,15 +21,11 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		log("Iniciando sesión");
+
 		
-		String n = request.getParameter( "user" );
-		String m = request.getParameter( "pwd" );
 		
-		if(n.equals( "admin" ) && m.equals( "admin" )) {
-		  RequestDispatcher dispatcher = request.getRequestDispatcher("/indexStore.jsp");
-	      dispatcher.forward(request, response);
-		}String base = request.getContextPath();
-        response.sendRedirect(base + "/index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/indexStore.jsp");
+		dispatcher.forward(request, response);
 		
 		
 		

@@ -114,6 +114,10 @@
     margin-bottom: 20px;
     }
     }
+    
+    form{
+        width: 100%;
+    }
     </style>
   </head>
   <body>
@@ -126,7 +130,7 @@
         
         <div class="row">
           <div class="col-50">
-            <h3>Informaci�n de envio</h3>
+            <h3>Informacion de envio</h3>
             <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
             <input type="text" id="fname" name="firstname" placeholder="nombre">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
@@ -166,7 +170,7 @@
 
             <div class="row">
               <div class="col-50">
-                <label for="expyear">A�o de vencimiento</label>
+                <label for="expyear">Año de vencimiento</label>
                 <input type="text" id="expyear" name="expyear" placeholder="A�o">
               </div>
               <div class="col-50">
@@ -195,22 +199,6 @@
   
   </form>
 
-  <div class="col-25">
-    <div class="container">
-      <h4>Resumen de compra
-        <span class="price" style="color:black">
-          <i class="fa fa-shopping-cart"></i>
-          <b>4</b>
-        </span>
-      </h4>     
-      <p><a href="#">Producto 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Producto 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Producto 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Producto 4</a> <span class="price">$2</span></p>
-      <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-    </div>
-  </div>
 </div>
   </body>
 </html>
