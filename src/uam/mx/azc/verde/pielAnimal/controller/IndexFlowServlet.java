@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CarritoForwardServlet
  */
-@WebServlet(name = "CarritoForward", urlPatterns = { "/CarritoForward" })
-public class CarritoForwardServlet extends HttpServlet {
+@WebServlet(name = "Index", urlPatterns = { "/Index" })
+public class IndexFlowServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -23,15 +23,15 @@ public class CarritoForwardServlet extends HttpServlet {
 	/**
 	* Default constructor.
 	*/
-	public CarritoForwardServlet() {
+	public IndexFlowServlet() {
 	// TODO Auto-generated constructor stub
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		log( "Cambiando de página");
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/indexStore.jsp");
-		dispatcher.forward(request, response);
+		String base = request.getContextPath();
+		response.sendRedirect( base + "/indexStore.jsp" );
 	}
 
 }

@@ -202,34 +202,13 @@
           <i class="fa fa-shopping-cart"></i>
           <b>4</b>
         </span>
-      </h4>
-        <main class="home__container" >
-    <c:set var="pattern" value="${ param.pattern }" />
-    <c:if test="${ param.pattern == null }">
-      <c:set var="pattern" value="%" />
-    </c:if>
-    <sql:query var="resultados" dataSource="jdbc/TestDS" >
-        SELECT c.id_producto,url,nombre_producto, precio, cantidad_producto 
-        FROM producto p INNER JOIN carrito c ON p.id_producto=c.id_producto 
-        WHERE c.id_orden=(select id_orden from carrito ORDER BY id_orden DESC LIMIT 1);
-        
-    </sql:query>
-    <c:forEach var="fila" items="${ resultados.rows }">
-     <form method="post" action="${pageContext.request.contextPath}/agregarCarrito">
-      <div class="home__product">
-        <div class="home__product-details">
-          <input  
-          type="hidden" 
-          name="id "
-          value="${fila.id_producto }"/> 
-          <p class="home__product-name" > ${fila.nombre_producto} </p>
-          <p class="home__product-price" >$ ${fila.precio} </p>
-          
-        </div>
-      </div>
-      </form>
-    </c:forEach>
-  </main>
+      </h4>     
+      <p><a href="#">Producto 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Producto 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Producto 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Producto 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
     </div>
   </div>
 </div>

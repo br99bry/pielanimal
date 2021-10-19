@@ -70,9 +70,9 @@ public class ProductoDTO implements Serializable {
   /**
    * @param cantidad the cantidad to set
    */
-  public void setCantidad( )
+  public void setCantidad( int cantidad )
   {
-    _cantidad = 1;
+    _cantidad = cantidad;
   }
   
 	

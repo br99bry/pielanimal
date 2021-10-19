@@ -49,13 +49,13 @@
   
    <servlet>
       <description>description</description>
-      <display-name>CarritoForward</display-name>
-      <servlet-name>CarritoForward</servlet-name>
-      <servlet-class>uam.mx.azc.verde.pielAnimal.controller.CarritoForwardServlet</servlet-class>
+      <display-name>Index</display-name>
+      <servlet-name>Index</servlet-name>
+      <servlet-class>uam.mx.azc.verde.pielAnimal.controller.IndexFlowServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-      <servlet-name>CarritoForward</servlet-name>
-      <url-pattern>/CarritoForward</url-pattern>
+      <servlet-name>Index</servlet-name>
+      <url-pattern>/Index</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -90,6 +90,7 @@
       <servlet-name>login</servlet-name>
       <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  
   <servlet>
       <description>description</description>
       <display-name>RegistroForm</display-name>
@@ -99,5 +100,16 @@
   <servlet-mapping>
       <servlet-name>RegistroForm</servlet-name>
       <url-pattern>/RegistroForm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <description>description</description>
+      <display-name>CarritoAdd</display-name>
+      <servlet-name>CarritoAdd</servlet-name>
+      <servlet-class>uam.mx.azc.verde.pielAnimal.controller.CarritoAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>CarritoAdd</servlet-name>
+      <url-pattern>/CarritoAdd</url-pattern>
   </servlet-mapping>
 </web-app>

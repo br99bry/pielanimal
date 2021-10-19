@@ -51,6 +51,7 @@ public class PagoFormServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
 		String accion = request.getParameter("boton");
+		
 		if(accion.equals("PDF")) {
 			try {
 				GenerarPDF(request, response);
